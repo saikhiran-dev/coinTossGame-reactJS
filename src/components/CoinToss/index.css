@@ -1,0 +1,48 @@
+.game-bg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to right, #f9d423, #e2a139);
+}
+.game-app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 28px 36px;
+}
+.main-heading {
+  color: #a35200;
+}
+.description {
+  color: #334155;
+  font-weight: bold;
+}
+.coin-image {
+  width: 140px;
+  margin-bottom: 38px;
+}
+.coin-button {
+  background-color: #f9d423;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: 'Roboto';
+  border-radius: 4px;
+  color: #a35200;
+  cursor: pointer;
+  margin-bottom: 9px;
+}
+.counter-container {
+  display: flex;
+}
+.count {
+  margin-right: 14px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #475569;
+}
