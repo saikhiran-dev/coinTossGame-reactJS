@@ -2,20 +2,20 @@ import {Component} from 'react'
 import './index.css'
 
 class CoinToss extends Component {
-  state = {Tails: 0, Heads: 0, image: false}
+  state = {tails: 0, heads: 0, image: false}
 
   onTossHeads = () => {
-    this.setState(prevState => ({Heads: prevState.Heads + 1, image: false}))
+    this.setState(prevState => ({heads: prevState.heads + 1, image: false}))
   }
 
   onTossTails = () => {
-    this.setState(prevState => ({Tails: prevState.Tails + 1, image: true}))
+    this.setState(prevState => ({tails: prevState.tails + 1, image: true}))
   }
 
   onTossCoin = () => {
     const tossResult = Math.floor(Math.random() * 2)
     // console.log(tossResult)
-    if (tossResult === 1) {
+    if (tossResult === 0) {
       this.onTossHeads()
     } else {
       this.onTossTails()
@@ -23,8 +23,8 @@ class CoinToss extends Component {
   }
 
   render() {
-    const {Heads, Tails, image} = this.state
-    const Total = Heads + Tails
+    const {heads, tails, image} = this.state
+    const Total = heads + tails
 
     return (
       <div className="game-bg-container">
@@ -53,8 +53,8 @@ class CoinToss extends Component {
           </button>
           <div className="counter-container">
             <p className="count">Total: {Total}</p>
-            <p className="count">Heads: {Heads}</p>
-            <p className="count">Tails: {Tails}</p>
+            <p className="count">Heads: {heads}</p>
+            <p className="count">Tails: {tails}</p>
           </div>
         </div>
       </div>
